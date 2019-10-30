@@ -10,7 +10,7 @@ Graph nodes represent grammar-based chart specifications
 edges represent edits that transform one chart to another.
 
 We contribute 
-- (1) a method for deriving transition costs via a partial ordering of edit operations and the solution of a resulting linear program, and
+- (1) a method for deriving transition costs via a partial ordering of edit operations and the solution of a resulting linear program, and
 - (2) a global weighting term that rewards consistency across transition subsequences.
 
 最后，我们演示了GraphScapa在自动顺序可视化演示文稿中的应用，详细说明了可视化之间的转换路径，并推荐了设计方案。
@@ -56,3 +56,17 @@ Due to the large combinatorial space,为了减少空间，我们利用了关于�
 
 ### Step 3: Deriving(得到) Edit Operation Costs
 
+线性规划解决一组所有编辑操作的成本估算。该解决方案还保留了加性距离，并允许不对称成本。
+
+## 编辑操作排名的实证研究
+
+## THE GRAPHSCAPE MODEL
+
+- 有向图
+- 过度成本 edge includes an **edit cost w(e)** , **transition cost T(u, v)** between visualizations u and v as the sum of edge weights along the shortest (lowest weight) path between them
+- Filter Sequence Costs(This calculation is illustrated in Figure 4.), **F(S)**
+- Global Weighting: Rewarding Consistent Subsequences(前面的工作和实验都发现，人们更喜欢按一致的顺序分组和排序的图表序列，即使这并不能完美地最小化编辑距离),**全局加权项W**
+- The GraphScape Sequence Cost Function , **Cost(S)** ,图(c)
+
+
+![avatar](.\res\3.png)
