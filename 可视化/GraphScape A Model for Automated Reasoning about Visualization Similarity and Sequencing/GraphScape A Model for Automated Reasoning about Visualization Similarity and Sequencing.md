@@ -9,7 +9,8 @@ GraphScape：可视化设计空间的有向图模型，支持可视化相似性�
 Graph nodes represent grammar-based chart specifications
 edges represent edits that transform one chart to another.
 
-We contribute 
+We contribute
+
 - (1) a method for deriving transition costs via a partial ordering of edit operations and the solution of a resulting linear program, and
 - (2) a global weighting term that rewards consistency across transition subsequences.
 
